@@ -11,7 +11,9 @@ import SwiftUI
 struct Inventory_ManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            InventoryHomeView()
+//            AddNewItemView(viewModel: .init())
         }
     }
 }

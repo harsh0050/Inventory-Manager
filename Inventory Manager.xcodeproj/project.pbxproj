@@ -11,6 +11,14 @@
 		3A0D562B2BAB25210002D98F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D562A2BAB25210002D98F /* ContentView.swift */; };
 		3A0D562D2BAB25230002D98F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D562C2BAB25230002D98F /* Assets.xcassets */; };
 		3A0D56302BAB25230002D98F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D562F2BAB25230002D98F /* Preview Assets.xcassets */; };
+		3A0D56392BAB268E0002D98F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D56382BAB268E0002D98F /* Realm */; };
+		3A0D563B2BAB268E0002D98F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D563A2BAB268E0002D98F /* RealmSwift */; };
+		3A0D563F2BAB286A0002D98F /* InventoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D563E2BAB286A0002D98F /* InventoryHomeView.swift */; };
+		3A0D56432BAB28D00002D98F /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D56422BAB28D00002D98F /* InventoryItem.swift */; };
+		3A0D56452BAB343C0002D98F /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D56442BAB343C0002D98F /* InventoryViewModel.swift */; };
+		3A0D56482BAB34760002D98F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D56472BAB34760002D98F /* RealmService.swift */; };
+		3A0D564A2BAB397B0002D98F /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D56492BAB397B0002D98F /* ImageService.swift */; };
+		3A0D564C2BAB6A670002D98F /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D564B2BAB6A670002D98F /* AddNewItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,13 @@
 		3A0D562A2BAB25210002D98F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A0D562C2BAB25230002D98F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0D562F2BAB25230002D98F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A0D563E2BAB286A0002D98F /* InventoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHomeView.swift; sourceTree = "<group>"; };
+		3A0D56422BAB28D00002D98F /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
+		3A0D56442BAB343C0002D98F /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		3A0D56472BAB34760002D98F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		3A0D56492BAB397B0002D98F /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		3A0D564B2BAB6A670002D98F /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
+		3A6A9DA22BAC244700982BFA /* Inventory-Manager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Inventory-Manager-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0D563B2BAB268E0002D98F /* RealmSwift in Frameworks */,
+				3A0D56392BAB268E0002D98F /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +68,12 @@
 		3A0D56272BAB25210002D98F /* Inventory Manager */ = {
 			isa = PBXGroup;
 			children = (
-				3A0D56282BAB25210002D98F /* Inventory_ManagerApp.swift */,
-				3A0D562A2BAB25210002D98F /* ContentView.swift */,
+				3A6A9DA22BAC244700982BFA /* Inventory-Manager-Info.plist */,
+				3A0D56462BAB34670002D98F /* Service */,
+				3A0D56412BAB28BC0002D98F /* Models */,
+				3A0D56402BAB28740002D98F /* View Model */,
+				3A0D563D2BAB28350002D98F /* UI Views */,
+				3A0D563C2BAB282C0002D98F /* App */,
 				3A0D562C2BAB25230002D98F /* Assets.xcassets */,
 				3A0D562E2BAB25230002D98F /* Preview Content */,
 			);
@@ -65,6 +86,49 @@
 				3A0D562F2BAB25230002D98F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A0D563C2BAB282C0002D98F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D56282BAB25210002D98F /* Inventory_ManagerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3A0D563D2BAB28350002D98F /* UI Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D562A2BAB25210002D98F /* ContentView.swift */,
+				3A0D563E2BAB286A0002D98F /* InventoryHomeView.swift */,
+				3A0D564B2BAB6A670002D98F /* AddNewItemView.swift */,
+			);
+			path = "UI Views";
+			sourceTree = "<group>";
+		};
+		3A0D56402BAB28740002D98F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D56442BAB343C0002D98F /* InventoryViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3A0D56412BAB28BC0002D98F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D56422BAB28D00002D98F /* InventoryItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A0D56462BAB34670002D98F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D56472BAB34760002D98F /* RealmService.swift */,
+				3A0D56492BAB397B0002D98F /* ImageService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +147,10 @@
 			dependencies = (
 			);
 			name = "Inventory Manager";
+			packageProductDependencies = (
+				3A0D56382BAB268E0002D98F /* Realm */,
+				3A0D563A2BAB268E0002D98F /* RealmSwift */,
+			);
 			productName = "Inventory Manager";
 			productReference = 3A0D56252BAB25210002D98F /* Inventory Manager.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 3A0D561C2BAB25210002D98F;
+			packageReferences = (
+				3A0D56372BAB268E0002D98F /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 3A0D56262BAB25210002D98F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0D56452BAB343C0002D98F /* InventoryViewModel.swift in Sources */,
+				3A0D56482BAB34760002D98F /* RealmService.swift in Sources */,
 				3A0D562B2BAB25210002D98F /* ContentView.swift in Sources */,
+				3A0D563F2BAB286A0002D98F /* InventoryHomeView.swift in Sources */,
+				3A0D564C2BAB6A670002D98F /* AddNewItemView.swift in Sources */,
 				3A0D56292BAB25210002D98F /* Inventory_ManagerApp.swift in Sources */,
+				3A0D56432BAB28D00002D98F /* InventoryItem.swift in Sources */,
+				3A0D564A2BAB397B0002D98F /* ImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +352,7 @@
 				DEVELOPMENT_TEAM = XH59WBH75H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Inventory-Manager-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +382,7 @@
 				DEVELOPMENT_TEAM = XH59WBH75H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Inventory-Manager-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +423,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A0D56372BAB268E0002D98F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.48.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A0D56382BAB268E0002D98F /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0D56372BAB268E0002D98F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		3A0D563A2BAB268E0002D98F /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0D56372BAB268E0002D98F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A0D561D2BAB25210002D98F /* Project object */;
 }
